@@ -11,6 +11,9 @@ const vimeo: Film[] = [
   "1242039872",
   "1243139179",
   "1243228470",
+  "1248295966",
+  "1248295963",
+  "1248295965"
 ].map((id, index) => ({
   id,
   platform: "Vimeo",
@@ -47,7 +50,7 @@ const scenes = [
 function compose(mode: string, i: number, position: number, count: number, width: number) {
   const d = i - position;
   const mobile = width < 650;
- 
+
   if (mode === "orbit") {
     const angle = (d * Math.PI * 2) / count;
     return {
@@ -99,7 +102,7 @@ function Scene({ scene }: { scene: (typeof scenes)[number] }) {
       const rect = ref.current.getBoundingClientRect();
       setPosition(
         Math.max(0, Math.min(1, -rect.top / Math.max(1, rect.height - window.innerHeight))) *
-          (count - 1),
+        (count - 1),
       );
       setWidth(stage.current.clientWidth);
     };
