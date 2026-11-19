@@ -5,7 +5,7 @@ import afterImg from "@/assets/before-after/after.jpg";
 import { cn } from "@/lib/utils";
 
 /**
- * Interactive before/after comparison slider.
+ * Interactive before/after comzparison slider.
  * Keyboard accessible (arrow keys), pointer + touch drag.
  * Imagery is an illustrative demonstration, not client footage.
  */
